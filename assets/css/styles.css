@@ -7,6 +7,7 @@
 }
 body {
     font-family: "Fira Sans", sans-serif;
+    background-color: #181A1B;
 }
 /* Header top */
 .header-top {
@@ -149,6 +150,14 @@ body {
     border-radius: 10px;
     transition: all 0.3s;
 }
+.navbar .button i {
+    color:#526419;
+    font-size: 20px;
+    cursor: pointer;
+}
+.navbar .button i:hover {
+    color:#729000;
+}
 
 /* Main banner */
 .main-banner {
@@ -156,11 +165,104 @@ body {
     z-index: 0;
     background-color: #2F3335;
 }
-
+.owl-carousel .item {
+    position: relative;
+}
 .main-banner .item img {
     height: 650px;
     object-fit: cover;
 }
+.owl-carousel .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.owl-carousel .owl-nav button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #729000 !important;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50% !important; 
+    cursor: pointer;
+    pointer-events: all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px !important;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    position: absolute;
+    left: 20px;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    position: absolute;
+    right: 20px;
+}
+
+.owl-carousel .owl-nav button:hover {
+    background-color: #2F3335 !important;
+}
+
+.main-banner .owl-carousel .owl-dots {
+    text-align: center;
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+}
+
+.main-banner .owl-carousel .owl-dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* introduction */
+.introduction p {
+    font-size: 18px;
+    line-height: 45px;
+    text-align: center;
+    margin: 70px 200px;
+    color: white;
+}
+.introduction .details {
+    margin-top: -70px;
+}
+
+.nav-videos-2 .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.nav-videos-2 .buttons button {
+    background-color: #2F3335;
+    border: none;
+}
+.nav-videos-2 .buttons button:hover {
+background-color: #729000;
+}
+
+.nav-videos-2 .buttons p {
+    font-size: 24px;
+    font-weight: 500px;
+    text-transform: uppercase;
+    margin: 12px 60px 12px 60px;
+    color:white
+}
+
+
+
 
 
 
