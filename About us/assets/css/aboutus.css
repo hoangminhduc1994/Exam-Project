@@ -50,6 +50,9 @@ body {
     font-size: 20px;
     color: #A3A19E;
 }
+.social-icons a i:hover {
+    opacity: 0.6;
+}
 
 /* Header main */
 .header-main {
@@ -216,6 +219,20 @@ body {
 .about-guga-logo img{
     object-fit: cover;
 }
+.invitation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.invitation p {
+    text-align:center;
+    font-size: 36px;
+    line-height: 44px;
+}
+.invitation img {
+    object-fit: cover;
+    margin-top: 44px;
+}
 
 /* added info */
 .added-info {
@@ -320,9 +337,12 @@ body {
 .footer ul li p:hover {
     opacity: 0.6;
 }
-.footer-author {
+.after-footer {
     border-top: solid 1px #818181;
     padding: 25px 0px 25px 0px;
+}
+.footer-author {
+    color: white;
 }
 
 
