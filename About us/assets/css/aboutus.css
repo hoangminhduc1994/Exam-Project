@@ -62,7 +62,9 @@ body {
 .header-main-logo img {
     object-fit: cover;
 }
-
+.menu-main .active {
+    background-color:#729000;
+}
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -79,7 +81,8 @@ body {
 }
 .header-main-menu li {
     position: relative;
-    padding: 0 20px;
+    padding: 8px 12px;
+    border-radius: 4px;
 }
 .header-main-menu a {
     text-decoration: none;
