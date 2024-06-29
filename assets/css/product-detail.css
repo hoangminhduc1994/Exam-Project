@@ -12,6 +12,7 @@ body {
 /* header */
 .header {
     background-color: #232627;
+    margin-bottom: 60px;
 }
 .header-content {
     display:flex;
@@ -118,7 +119,7 @@ body {
 }
 .rating-stars {
   padding-left: 30px;
-  background-color: #232627;
+  border: solid 3px #232627;
   padding-top: 30px;
 }
 .rating-stars p {
@@ -164,7 +165,7 @@ body {
   display: flex;
   color: #8D8D8D;
   padding-bottom: 214px;
-  background-color: #232627;
+  border: solid 3px #232627;
   padding-top: 30px;
   padding-left: 10px;
 }
@@ -178,6 +179,32 @@ body {
 .percent-detail {
   margin-top: 5px;
 }
+
+/* footer */
+.footer {
+  margin-top: 50px;
+  background-color: #232627;
+}
+.footer-content {
+  text-align: center;
+}
+.terms-service {
+  display: flex;
+  justify-content: center;
+}
+.footer-content p {
+  font-size: 10px;
+  line-height: 10px;
+  color: #8D8D8D;
+}
+.footer-content p:hover {
+  opacity: 0.6;
+}
+.terms-service p {
+  font-size: 16px;
+  margin: 25px 10px;
+}
+
 
 
 

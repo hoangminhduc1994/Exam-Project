@@ -192,7 +192,23 @@ body {
 }
 
 /* listing-product */
-
+.listing-product h2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    color: #fff;
+}
+.row-js .items {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.row-js .items img{
+    object-fit: cover;
+    width: 100%;
+}
 /* added info */
 .added-info {
     background-color: #262A2B;
