@@ -12,14 +12,33 @@ toggleButton.addEventListener("click", () => {
 submenuLinks.forEach((link) => {
   const dropdown = link.nextElementSibling;
 
+  // Open submenu on mouseenter
   link.addEventListener("mouseenter", (e) => {
     e.preventDefault();
     closeAllSubmenus();
     dropdown.classList.add("active");
   });
 
+  // Keep submenu open on mouseenter of the dropdown
+  dropdown.addEventListener("mouseenter", () => {
+    dropdown.classList.add("active");
+  });
+
+  // Close submenu on mouseleave from link and dropdown
+  link.addEventListener("mouseleave", () => {
+    setTimeout(() => {
+      if (!dropdown.matches(":hover")) {
+        dropdown.classList.remove("active");
+      }
+    }, 100);
+  });
+
   dropdown.addEventListener("mouseleave", () => {
-    dropdown.classList.remove("active");
+    setTimeout(() => {
+      if (!link.matches(":hover")) {
+        dropdown.classList.remove("active");
+      }
+    }, 100);
   });
 });
 
@@ -29,15 +48,9 @@ function closeAllSubmenus() {
     submenu.classList.remove("active");
   });
 }
-// Close submenus and navbar when clicking outside
-document.addEventListener("click", (e) => {
-  const isClickInside =
-    navbarLinks.contains(e.target) || toggleButton.contains(e.target);
-  if (!isClickInside) {
-    closeAllSubmenus();
-    navbarLinks.classList.remove("active");
-  }
-});
+
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const setActiveMenu = (selector) => {

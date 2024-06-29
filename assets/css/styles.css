@@ -234,15 +234,16 @@ body {
 }
 
 /* introduction */
-.introduction p {
-    font-size: 18px;
-    line-height: 45px;
+.introduction-detail p {
+    font-size: 24px;
+    line-height: 44px;
     text-align: center;
-    margin: 70px 200px;
+    margin: 70px 50px;
     color: white;
 }
 .introduction .details {
     margin-top: -70px;
+    font-size: 16px;
 }
 
 .nav-videos-2 .buttons {
@@ -411,15 +412,26 @@ background-color: #729000;
 
 /* Responsive */
 @media screen and (max-width: 1279px) {
-
+    .main-banner .item img {
+        height: 500px;
+    }
 }
 @media screen and (max-width: 1200px) {
     .header-main-logo {
         margin:auto;
         padding: 20px 0px;
     }
+    .main-banner .item img {
+        height: 450px;
+    }
+    .main-banner-slider .owl-nav {
+        top: 35%;
+    }
 }
 @media screen and (max-width: 991px) {
+    .main-banner .item img {
+        height: 350px;
+    }
     .header-main-logo {
         margin-top: -10px;
     }
@@ -463,9 +475,18 @@ background-color: #729000;
         display: flex;
         flex-direction: column;
     }
+    .introduction-detail p {
+        font-size: 20px;
+    }
 }
 @media screen and (max-width: 768px) {
-    
+    .main-banner .item img {
+        height: 300px;
+    }
+    .introduction-detail details {
+        font-size: 14px;
+        line-height: 30px;
+    }
 }
 @media screen and (max-width: 480px) {
 
