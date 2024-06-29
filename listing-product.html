@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-
     <!-- Import Fira Sans font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,7 +14,7 @@
     <!-- Import Font Awesome -->
     <link
       rel="stylesheet"
-      href="./lib/fontawesome-free-6.5.2-web/css/fontawesome.css"
+      href="./lib/fontawesome-free-6.5.2-web/css/fontawesome.min.css"
     />
     <link
       rel="stylesheet"
@@ -39,7 +38,7 @@
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css" />
 
     <!-- Import Styles.css -->
-    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/listing-product.css"/>
   </head>
   <body>
     <!-- Header Top -->
@@ -202,59 +201,25 @@
       </div>
     </div>
 
-    <!-- Main banner -->
-    <div class="main-banner">
-      <div class="owl-carousel owl-theme main-banner-slider">
-        <div class="item">
-          <img src="./assets/images/1631616670_61407e9e301e3.jpg" />
-        </div>
-        <div class="item">
-          <img src="./assets/images/steak.jpg" />
-        </div>
-        <div class="item">
-          <img src="./assets/images/z0jco6jjp2j81.jpg" />
-        </div>
-      </div>
-    </div>
-
-    <!-- Introduction -->
-    <div class="introduction">
+    <!-- Search box -->
+    <div class="search-box">
       <div class="container">
         <div class="row">
           <div class="col-12 col-sm-12 col-md-12">
-            <div class="introduction-detail">
-              <p>Hi, Thanks for visiting Guga Foods!</p>
-            <p class="details">
-              I am here too share all my favorite recipes with you. Cooking
-              things me and my family love, BBQ to Unique style meats and much
-              much more! I love to hear from you and you are welcome to send me
-              a message or leave a comment on any video. Thanks for stopping by!
-            </p>
+            <div class="search-form">
+              <input
+                placeholder="Search Recipes, Sides and More..."
+                type="text"
+                id="search"
+              />
+              <button type="submit">SEARCH</button>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!--Nav videos list  -->
-    <div class="nav-videos-2">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-sm-12 col-md-12">
-            <div class="buttons">
-              <button class="recent-recipes">
-                <p>recent recipes</p>
-              </button>
-              <button class="experiment-recipes">
-                <p>experiment recipes</p>
-              </button>
-            </div>
-            <div id="data-container"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    <!-- listing-product -->
     <!-- added info -->
     <div class="added-info">
       <div class="container">
@@ -482,8 +447,9 @@
         </div>
       </div>
     </div>
+
     <!-- afterfooter -->
-    <div class="after-footer">
+     <div class="after-footer">
       <div class="container">
         <div class="row">
           <div class="col-12 col-sm-12 col-md-12">
@@ -491,7 +457,7 @@
           </div>
         </div>
       </div>
-    </div>
+     </div>
 
     <!-- Import Jquerry -->
     <script src="./lib/jquery-3.7.1.js"></script>
@@ -499,11 +465,9 @@
     <script src="./lib/owl carousel/owl.carousel.min.js"></script>
     <!-- Import Bootstrap js -->
     <script src="./lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- import menu.js-->
-    <script src="./assets/js/menu.js"></script>
-    <!-- Import carousel file js -->
-    <script src="./assets/js/carousel.js"></script>
-    <!-- Import Main.js -->
-    <script src="./assets/js/main.js"></script>
+    <!-- import menu.js -->
+     <script src="./assets/js/menu.js"></script>
+    <!-- import aboutus.js -->
+    <script src="./assets/js/aboutus.js"></script>
   </body>
 </html>
