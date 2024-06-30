@@ -190,7 +190,66 @@ body {
     margin-left: 10px;
 }
 
+/* contact */
+.contact {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.contact h2 {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 44px;
+    margin-bottom: 20px;
+    color: white;
+}
+.contact a {
+    text-decoration: none;
+    color: #ccc;
+}
+.contact a:hover {
+    opacity: 0.6;
+}
+.contact p {
+    font-size: 18px;
+    line-height: 40px;
+    color: #ccc;
+}
+.form-group {
+    margin-bottom: 15px;
+}
 
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ccc;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact form button {
+    width: 30%;
+    padding: 10px;
+    background-color: #729000;
+    color:white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact form button:hover {
+    opacity: 0.6;
+}
 
 /* added info */
 .added-info {
