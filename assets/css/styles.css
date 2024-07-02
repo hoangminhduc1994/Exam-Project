@@ -271,6 +271,17 @@ background-color: #729000;
     margin: 12px 60px 12px 60px;
     color:white
 }
+.post-recipe {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.post-recipe img{
+    object-fit: cover;
+    width: 100%;
+}
 
 
 
