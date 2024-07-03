@@ -272,7 +272,7 @@ background-color: #729000;
     color:white
 }
 .post-recipe {
-    background-color: #fff;
+    background-color: #2F3335;
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 8px;
@@ -281,9 +281,89 @@ background-color: #729000;
 .post-recipe img{
     object-fit: cover;
     width: 100%;
+    border-radius: 5px;
+}
+.post-recipe p {
+    margin-top: 20px;
+    color:#ccc
+}
+.post-recipe a {
+    text-decoration: none;
+    color: #729000;
+}
+.post-recipe a:hover {
+    opacity: 0.7;
 }
 
-
+.data-container .view-all {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+.data-container .view-all p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    width: 16%;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #729000;
+    text-transform: uppercase;
+}
+.data-container .view-all:hover {
+    opacity: 0.7;
+}
+/* listing-product */
+.listing-product h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    color: #fff;
+}
+.row-js .items {
+    background-color: #2F3335;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.row-js .items img{
+    object-fit: cover;
+    width: 100%;
+    border-radius: 8px;
+}
+.row-js .items p {
+    margin-top: 20px;
+    color:#ccc;
+}
+.row-js .items a {
+    text-decoration: none;
+    color:#729000;
+}
+.row-js .items a:hover {
+    opacity: 0.7;
+}
+.listing-product .view-all {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+.listing-product .view-all p {
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    width: 20%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #729000;
+    text-transform: uppercase;
+}
+.listing-product .view-all:hover {
+    opacity: 0.7;
+}
 
 
 

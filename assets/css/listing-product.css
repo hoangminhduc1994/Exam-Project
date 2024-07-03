@@ -199,7 +199,7 @@ body {
     color: #fff;
 }
 .row-js .items {
-    background-color: #fff;
+    background-color: #2F3335;
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 8px;
@@ -208,6 +208,18 @@ body {
 .row-js .items img{
     object-fit: cover;
     width: 100%;
+    border-radius: 8px;
+}
+.row-js .items p {
+    margin-top: 20px;
+    color:#ccc;
+}
+.row-js .items a {
+    text-decoration: none;
+    color:#729000;
+}
+.row-js .items a:hover {
+    opacity: 0.7;
 }
 /* added info */
 .added-info {
