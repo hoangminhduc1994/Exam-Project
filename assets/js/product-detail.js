@@ -21,3 +21,26 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 });
+
+
+
+// button
+document.addEventListener('DOMContentLoaded', () => {
+  const decreaseButton = document.querySelector('.decrease-quantity');
+  const increaseButton = document.querySelector('.increase-quantity');
+  const quantitySpan = document.querySelector('.quantity');
+
+  let quantity = parseInt(quantitySpan.textContent);
+
+  decreaseButton.addEventListener('click', () => {
+      if (quantity > 1) {
+          quantity--;
+          quantitySpan.textContent = quantity;
+      }
+  });
+
+  increaseButton.addEventListener('click', () => {
+      quantity++;
+      quantitySpan.textContent = quantity;
+  });
+});
