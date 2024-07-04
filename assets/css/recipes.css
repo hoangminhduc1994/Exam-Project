@@ -309,8 +309,9 @@ body {
     display: flex;
   }
   .steps .icon p {
-    margin-left: 20px;
-    color:#729000;
+    margin-left: 15px;
+    color: #9CCF24;
+    font-size: 28px;
   }
   .steps img {
     margin-top: 20px;
@@ -318,6 +319,9 @@ body {
     margin-bottom: 30px;
     width: 60%;
     object-fit: cover;
+  }
+  .steps i {
+    font-size: 32px;
   }
 
 
@@ -431,6 +435,8 @@ body {
 .footer-author {
     color: white;
 }
+
+
 
 
 

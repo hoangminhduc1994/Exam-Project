@@ -16,12 +16,12 @@ const renderData = (data) => {
     data.forEach(value => {
         htmlContent += `
             <div class="col-12 col-sm-6 col-md-4">
-            <div class="items">
+            <div class="items" id="product-${value.id}">
               <img src="${value.image}" alt="product">
               <p>${value.price}</p>
               <p>${value.name}</p>
               <div class="more-detail">
-              <a href="#">More details</a>
+              <a href="product-detail.html?id=${value.id}">More details</a>
               </div>
             </div>
           </div>
