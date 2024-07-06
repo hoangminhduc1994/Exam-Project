@@ -63,7 +63,7 @@ body {
   object-fit: cover;
 }
 .menu-main .active {
-  background-color: #729000;
+  background-color: #586c14;
 }
 .navbar {
   display: flex;
@@ -404,4 +404,8 @@ body {
 @media screen and (max-width: 768px) {
 }
 @media screen and (max-width: 480px) {
+  .footer-logos img {
+    width: 180px;
+    object-fit: cover;
+  }
 }

@@ -63,7 +63,7 @@ body {
   object-fit: cover;
 }
 .menu-main .active {
-  background-color: #729000;
+  background-color: #586C14;
 }
 .navbar {
   display: flex;
@@ -441,6 +441,10 @@ body {
   color: white;
   border: none;
   margin-left: -3.5px;
+  opacity: 0.9;
+}
+.subscribe button:hover {
+  opacity: 1;
 }
 
 /* footer */
@@ -448,6 +452,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .footer-logos img {
   width: 224px;
@@ -559,4 +565,8 @@ body {
   }
 }
 @media screen and (max-width: 480px) {
+  .footer-logos img {
+    width: 180px;
+    object-fit: cover;
+  }
 }
