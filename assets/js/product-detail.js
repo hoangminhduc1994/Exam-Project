@@ -26,20 +26,18 @@ document.addEventListener("DOMContentLoaded", () => {
 let cartBtn = document.querySelector(".cart i");
 let cartModalOverlay = document.querySelector(".cart-modal-overlay");
 let closeBtn = document.querySelector("#close-btn");
-// console.log(closeBtn);
+
 
 cartBtn.addEventListener("click", () => {
   cartModalOverlay.style.transform = "translateX(0)";
 });
 
 closeBtn.addEventListener("click", () => {
-  // alert("123");
+
   cartModalOverlay.style.transform = "translateX(200%)";
 })
 
-// event.target.classList.contain("cart-modal-overlay") 
-// -> check bam dung class cart-modal-overlay 
-// -> true, Khong phai -> false
+
 
 cartModalOverlay.addEventListener("click", (event) => {
   if (event.target.classList.contains("cart-modal-overlay") == true) {
