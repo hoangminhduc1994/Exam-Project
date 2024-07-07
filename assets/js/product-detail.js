@@ -22,25 +22,32 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// cart
+let cartBtn = document.querySelector(".cart i");
+let cartModalOverlay = document.querySelector(".cart-modal-overlay");
+let closeBtn = document.querySelector("#close-btn");
+// console.log(closeBtn);
 
-
-// button
-document.addEventListener('DOMContentLoaded', () => {
-  const decreaseButton = document.querySelector('.decrease-quantity');
-  const increaseButton = document.querySelector('.increase-quantity');
-  const quantitySpan = document.querySelector('.quantity');
-
-  let quantity = parseInt(quantitySpan.textContent);
-
-  decreaseButton.addEventListener('click', () => {
-      if (quantity > 1) {
-          quantity--;
-          quantitySpan.textContent = quantity;
-      }
-  });
-
-  increaseButton.addEventListener('click', () => {
-      quantity++;
-      quantitySpan.textContent = quantity;
-  });
+cartBtn.addEventListener("click", () => {
+  cartModalOverlay.style.transform = "translateX(0)";
 });
+
+closeBtn.addEventListener("click", () => {
+  // alert("123");
+  cartModalOverlay.style.transform = "translateX(200%)";
+})
+
+// event.target.classList.contain("cart-modal-overlay") 
+// -> check bam dung class cart-modal-overlay 
+// -> true, Khong phai -> false
+
+cartModalOverlay.addEventListener("click", (event) => {
+  if (event.target.classList.contains("cart-modal-overlay") == true) {
+    cartModalOverlay.style.transform = "translateX(-200%)";
+  }
+});
+
+
+
+
+
