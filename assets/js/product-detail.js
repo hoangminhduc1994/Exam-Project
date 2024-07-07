@@ -41,7 +41,7 @@ closeBtn.addEventListener("click", () => {
 
 cartModalOverlay.addEventListener("click", (event) => {
   if (event.target.classList.contains("cart-modal-overlay") == true) {
-    cartModalOverlay.style.transform = "translateX(-200%)";
+    cartModalOverlay.style.transform = "translateX(200%)";
   }
 });
 
