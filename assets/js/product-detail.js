@@ -23,51 +23,49 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // cart
-let cartBtn = document.querySelector(".cart-icon i");
+// Define cartModalOverlay
 let cartModalOverlay = document.querySelector(".cart-modal-overlay");
+
+// Cart button event listeners
+let cartBtn = document.querySelector(".cart-icon i");
 let closeBtn = document.querySelector("#close-btn");
-// console.log(closeBtn);
 
 cartBtn.addEventListener("click", () => {
   cartModalOverlay.style.transform = "translateX(0)";
 });
 
 closeBtn.addEventListener("click", () => {
-  // alert("123");
   cartModalOverlay.style.transform = "translateX(200%)";
-})
+});
 
-// event.target.classList.contain("cart-modal-overlay") 
-// -> check bam dung class cart-modal-overlay 
-// -> true, Khong phai -> false
-
+// Close cart when clicking outside of the cart
 cartModalOverlay.addEventListener("click", (event) => {
-  if (event.target.classList.contains("cart-modal-overlay") == true) {
+  if (event.target.classList.contains("cart-modal-overlay")) {
     cartModalOverlay.style.transform = "translateX(200%)";
   }
 });
 
-
+// Handle add to cart
 const addToCart = document.querySelectorAll(".add-to-cart");
 
-addToCart.forEach((button)=>{
-  button.addEventListener("click", ()=>{
+addToCart.forEach((button) => {
+  button.addEventListener("click", () => {
     cartModalOverlay.style.transform = "translateX(0)";
-
     addToCartClicked(button);
   });
 });
-//  price, imageSrc
-const addToCartClicked = (button) => {
-  let parentCart = button.parentElement;
-  let productName = parentCart.querySelector(".product-name").innerHTML
-  let price = parentCart.querySelector(".product-price").innerHTML;
-  
 
-  addToCartItem(productName, price);
-}
-// popup
-const addToCartItem = (productName, price) => {
+// Get price, name, and quantity when adding to cart
+const addToCartClicked = (button) => {
+  let parentCart = button.closest(".product-details");
+  let productName = parentCart.querySelector(".product-name").innerHTML;
+  let price = parentCart.querySelector(".product-price").innerHTML.replace("$", "").trim();
+  let quantity = parseInt(parentCart.querySelector(".quantity").textContent);
+
+  addToCartItem(productName, price, quantity);
+};
+
+const addToCartItem = (productName, price, quantity) => {
   let productRows = document.querySelector(".product-rows");
 
   // Create a new div element for the product row
@@ -77,8 +75,8 @@ const addToCartItem = (productName, price) => {
   // Construct the HTML for the product row
   let cartHTML = `
     <p class="cart-name">${productName}</p>
-    <span class="cart-price">${price}</span>
-    <input class="product-quantity" type="number" value="1">
+    <span class="cart-price">$${price}</span>
+    <input class="product-quantity" type="number" value="${quantity}">
     <button class="remove-btn">Remove</button>
   `;
   divEl.innerHTML = cartHTML;
@@ -169,4 +167,31 @@ const changeQuantity = (inputEl) => {
 
   updateCartPrice(); // Update cart total when quantity changes
 };
+
+// Handle quantity control
+const updateQuantity = (button, action) => {
+  let quantityControl = button.closest(".quantity-control");
+  let quantitySpan = quantityControl.querySelector(".quantity");
+  let currentQuantity = parseInt(quantitySpan.textContent);
+
+  if (action === 'increase') {
+    quantitySpan.textContent = currentQuantity + 1;
+  } else if (action === 'decrease' && currentQuantity > 1) {
+    quantitySpan.textContent = currentQuantity - 1;
+  }
+};
+
+// Event listeners for increase and decrease buttons
+document.querySelectorAll('.increase-quantity').forEach(button => {
+  button.addEventListener('click', () => {
+    updateQuantity(button, 'increase');
+  });
+});
+
+document.querySelectorAll('.decrease-quantity').forEach(button => {
+  button.addEventListener('click', () => {
+    updateQuantity(button, 'decrease');
+  });
+});
+
 
