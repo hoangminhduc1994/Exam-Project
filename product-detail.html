@@ -45,14 +45,9 @@
                 />
               </a>
               <div class="shopping">
-                <span>USD $</span>
-                <div class="cart">
-                  <a href="#">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                  </a>
-                  <div class="number-product">
-                    <p>0</p>
-                  </div>
+                <div class="cart-icon">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <span class="cart-quantity">0</span>
                 </div>
               </div>
             </div>
@@ -61,11 +56,10 @@
       </div>
     </div>
 
-    <!--  Cart modal: Noi dung them san pham./Start  -->
+    <!--  Cart modal -->
   <div class="cart-modal-overlay">
     <div class="cart-modal">
       <i id="close-btn" class="fas fa-times"></i>
-      <h1 class="cart-is-empty">Cart is empty</h1>
 
       <div class="product-rows">
         <!-- THEM SP TRONG GIO HANG -->
@@ -89,28 +83,16 @@
               <div class="swiper-container swiper-main">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <img
-                      src="./assets/images/guga-foods-shirt-1.webp"
-                      alt="Product Image 1"
-                    />
+                    <img src="./assets/images/guga-foods-shirt-1.webp" alt="Product Image 1" />
                   </div>
                   <div class="swiper-slide">
-                    <img
-                      src="./assets/images/Guga_CreatorPhotos2.webp"
-                      alt="Product Image 2"
-                    />
+                    <img src="./assets/images/Guga_CreatorPhotos2.webp" alt="Product Image 2" />
                   </div>
                   <div class="swiper-slide">
-                    <img
-                      src="./assets/images/Guga_CreatorPhotosShirt3.webp"
-                      alt="Product Image 3"
-                    />
+                    <img src="./assets/images/Guga_CreatorPhotosShirt3.webp" alt="Product Image 3" />
                   </div>
                   <div class="swiper-slide">
-                    <img
-                      src="./assets/images/Guga_CreatorPhotosShirt4.webp"
-                      alt="Product Image 4"
-                    />
+                    <img src="./assets/images/Guga_CreatorPhotosShirt4.webp" alt="Product Image 4" />
                   </div>
                 </div>
                 <div class="swiper-button-next"></div>
@@ -119,28 +101,16 @@
               <div class="swiper-container swiper-thumb">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <img
-                      src="./assets/images/guga-foods-shirt-1.webp"
-                      alt="Product Thumbnail 1"
-                    />
+                    <img src="./assets/images/guga-foods-shirt-1.webp" alt="Product Thumbnail 1" />
                   </div>
                   <div class="swiper-slide">
-                    <img
-                      src="./assets/images/Guga_CreatorPhotos2.webp"
-                      alt="Product Thumbnail 2"
-                    />
+                    <img src="./assets/images/Guga_CreatorPhotos2.webp" alt="Product Thumbnail 2" />
                   </div>
                   <div class="swiper-slide">
-                    <img
-                      src="./assets/images/Guga_CreatorPhotosShirt3.webp"
-                      alt="Product Thumbnail 3"
-                    />
+                    <img src="./assets/images/Guga_CreatorPhotosShirt3.webp" alt="Product Thumbnail 3" />
                   </div>
                   <div class="swiper-slide">
-                    <img
-                      src="./assets/images/Guga_CreatorPhotosShirt4.webp"
-                      alt="Product Thumbnail 4"
-                    />
+                    <img src="./assets/images/Guga_CreatorPhotosShirt4.webp" alt="Product Thumbnail 4" />
                   </div>
                 </div>
               </div>
@@ -150,18 +120,28 @@
             <div class="product-details">
               <p>Guga Foods</p>
               <h2>Guga Foods T-Shirt</h2>
-              <p>
-                Sharpen your knives and enjoy a succulent piece of steak in this
-                Guga Tee.
-              </p>
+              <p>Sharpen your knives and enjoy a succulent piece of steak in this Guga Tee.</p>
+              <p class="product-price">$20</p>
               <div class="quantity-control">
                 <button class="decrease-quantity">-</button>
-                <span class="quantity">0</span>
+                <span class="quantity">1</span>
                 <button class="increase-quantity">+</button>
               </div>
-              <button class="add-to-cart">Add to Cart</button>
+              <button class="add-to-cart" data-price="20">Add to Cart</button>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="cart-modal-overlay">
+      <div class="cart-modal">
+        <span id="close-btn">&times;</span>
+        <h2>Your Cart</h2>
+        <div class="product-rows"></div>
+        <div class="cart-total">
+          <p>Total:</p>
+          <p class="total-price">$0</p>
         </div>
       </div>
     </div>

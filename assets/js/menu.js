@@ -1,99 +1,106 @@
-const toggleButton = document.querySelector(".toggle-button");
-const navbarLinks = document.querySelector(".header-main-menu");
-const submenuLinks = document.querySelectorAll(".submenu > a");
-const submenus = document.querySelectorAll(".submenu .dropdown");
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleButton = document.querySelector(".toggle-button");
+  const navbarLinks = document.querySelector(".header-main-menu");
+  const submenuLinks = document.querySelectorAll(".submenu > a");
+  const submenus = document.querySelectorAll(".submenu .dropdown");
 
-// Toggle navbar visibility on mobile
-toggleButton.addEventListener("click", () => {
-  navbarLinks.classList.toggle("active");
+  // Toggle navbar visibility on mobile
+  toggleButton.addEventListener("click", () => {
+    navbarLinks.classList.toggle("active");
+  });
+
+  // Toggle submenu visibility
+  submenuLinks.forEach((link) => {
+    const dropdown = link.nextElementSibling;
+
+    // Open submenu on mouseenter
+    link.addEventListener("mouseenter", (e) => {
+      e.preventDefault();
+      closeAllSubmenus();
+      dropdown.classList.add("active");
+    });
+
+    // Keep submenu open on mouseenter of the dropdown
+    dropdown.addEventListener("mouseenter", () => {
+      dropdown.classList.add("active");
+    });
+
+    // Close submenu on mouseleave from link and dropdown
+    link.addEventListener("mouseleave", () => {
+      setTimeout(() => {
+        if (!dropdown.matches(":hover")) {
+          dropdown.classList.remove("active");
+        }
+      }, 100);
+    });
+
+    dropdown.addEventListener("mouseleave", () => {
+      setTimeout(() => {
+        if (!link.matches(":hover")) {
+          dropdown.classList.remove("active");
+        }
+      }, 100);
+    });
+  });
+
+  // Close all submenus
+  const closeAllSubmenus = () => {
+    submenus.forEach((submenu) => {
+      submenu.classList.remove("active");
+    });
+  };
 });
-
-// Toggle submenu visibility
-submenuLinks.forEach((link) => {
-  const dropdown = link.nextElementSibling;
-
-  // Open submenu on mouseenter
-  link.addEventListener("mouseenter", (e) => {
-    e.preventDefault();
-    closeAllSubmenus();
-    dropdown.classList.add("active");
-  });
-
-  // Keep submenu open on mouseenter of the dropdown
-  dropdown.addEventListener("mouseenter", () => {
-    dropdown.classList.add("active");
-  });
-
-  // Close submenu on mouseleave from link and dropdown
-  link.addEventListener("mouseleave", () => {
-    setTimeout(() => {
-      if (!dropdown.matches(":hover")) {
-        dropdown.classList.remove("active");
-      }
-    }, 100);
-  });
-
-  dropdown.addEventListener("mouseleave", () => {
-    setTimeout(() => {
-      if (!link.matches(":hover")) {
-        dropdown.classList.remove("active");
-      }
-    }, 100);
-  });
-});
-
-// Close all submenus
-function closeAllSubmenus() {
-  submenus.forEach((submenu) => {
-    submenu.classList.remove("active");
-  });
-}
-
-
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const setActiveMenu = (selector) => {
-    // B1: Truy cap vao PT menu li
+    // Access the menu items
     const menuItems = document.querySelectorAll(selector);
 
-    // Remove active old
+    // Function to remove active classes
     const removeActiveClasses = (menuItems) => {
       menuItems.forEach((value) => {
         value.classList.remove("active");
       });
     };
 
-    // Kiem tra xem Menu da co PT nao active trong locaStorage ?
+    // Check if there is an active menu item in localStorage
     let activeIndex = localStorage.getItem("ACTIVE_MENU");
 
     if (activeIndex !== null) {
-      // Xoa cac "active" cu di
+      // Remove old active classes
       removeActiveClasses(menuItems);
-      // Them "active" dang co trong localStorage
+      // Add the active class from localStorage
       menuItems[activeIndex].classList.add("active");
-    } else {
-      menuItems[0].classList.add("active");
     }
 
-    // B2: Lap qua menuTems -> Gan 1 su kien doi user click "active"
+    // Iterate over the menu items and add click event listeners
     menuItems.forEach((item, index) => {
       item.addEventListener("click", (event) => {
         event.preventDefault();
-        // Xoa cac "active" cu di
+        // Remove old active classes
         removeActiveClasses(menuItems);
-        // Them "active" moi
+        // Add the new active class
         item.classList.add("active");
-        // Set lai gia "active" vao trong localStorage
+        // Set the new active index in localStorage
         localStorage.setItem("ACTIVE_MENU", index);
 
-        // C1: Reset thuoc tinh the a sau khi  event.preventDefault();
+        // Reset the href attribute after preventDefault();
         const href = item.querySelector("a").getAttribute("href");
         window.location.href = href;
-
-        // c2: Su dung chi index
       });
     });
+
+    // Add event listener to header-main-logo
+    const headerLogo = document.querySelector(".header-main-logo");
+    if (headerLogo) {
+      headerLogo.addEventListener("click", (event) => {
+        event.preventDefault();
+        removeActiveClasses(menuItems);
+        localStorage.removeItem("ACTIVE_MENU"); // Optionally, remove the active menu from localStorage
+        window.location.href = "index.html"; // Redirect to index.html
+      });
+    }
   };
+
   setActiveMenu(".menu-main li");
 });
