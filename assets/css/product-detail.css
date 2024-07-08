@@ -163,7 +163,8 @@ img {
   outline: none;
   border: none;
   cursor: pointer;
-  margin: 2em 0 1em 0;
+  margin:auto;
+  margin-top: 30px;
 }
 
 .product-rows {

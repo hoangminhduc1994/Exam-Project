@@ -153,6 +153,13 @@ const updateCartPrice = () => {
       cartQuantityEl.innerHTML = "100+";
     }
   }
+  // Show or hide the purchase button
+  let purchaseBtn = document.querySelector(".purchase-btn");
+  if (totalQuantity === 0) {
+    purchaseBtn.style.display = "none";
+  } else {
+    purchaseBtn.style.display = "block";
+  }
 };
 
 const removeItem = (productRow) => {
