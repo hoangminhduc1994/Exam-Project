@@ -178,11 +178,15 @@ img {
 .product-row {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.cart-image {
-  width: 10rem;
-  margin: 1em;
+
+.cart-name {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin: auto;
 }
 
 .cart-price {
