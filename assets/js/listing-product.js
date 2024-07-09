@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const rowJs = document.querySelector(".row-js");
+  const searchMessage = document.querySelector("#search-message");
   const apiUrl = "https://vm95y5-3000.csb.app/products";
   let fetchedData = [];
 
@@ -44,6 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let textSearch = document.querySelector("#search").value;
     let searchTerm = textSearch.toLowerCase().trim();
     let filteredData = filterBySearchTerm(fetchedData, searchTerm);
+
+    searchMessage.innerHTML = `Search results for "${textSearch}"`;
     renderData(filteredData);
   };
 

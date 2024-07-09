@@ -190,8 +190,16 @@ body {
     border: none;
     margin-left: 10px;
 }
+#search-message {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 30px;
+}
 
 /* listing-product */
+.listing-product {
+    min-height: 500px;
+}
 .listing-product h2 {
     display: flex;
     justify-content: center;
