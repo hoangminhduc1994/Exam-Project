@@ -1,26 +1,4 @@
-// swiper
-document.addEventListener("DOMContentLoaded", () => {
-  const swiperThumb = new Swiper(".swiper-thumb", {
-    spaceBetween: 10,
-    slidesPerView: 4,
-    freeMode: true,
-    watchSlidesVisibility: true,
-    watchSlidesProgress: true,
-    slideToClickedSlide: true,
-  });
 
-  const swiperMain = new Swiper(".swiper-main", {
-    spaceBetween: 10,
-    loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    thumbs: {
-      swiper: swiperThumb,
-    },
-  });
-});
 
 // cart
 // Define cartModalOverlay
@@ -235,7 +213,27 @@ const populateProduct = (product) => {
     swiperThumbWrapper.appendChild(thumbSlide);
   });
 
-  
+  // Initialize Swiper after the images are added
+  const swiperThumb = new Swiper('.swiper-thumb', {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    slideToClickedSlide: true,
+  });
+
+  const swiperMain = new Swiper('.swiper-main', {
+    spaceBetween: 10,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    thumbs: {
+      swiper: swiperThumb,
+    },
+  });
 }
 
 // Fetch the data from data.json using Axios
