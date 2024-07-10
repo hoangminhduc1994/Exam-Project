@@ -82,80 +82,31 @@
       <span class="cart-quantity">0</span>
     </div>
     <!-- swiper -->
-    <div class="product-content">
+    <div id="product-content" class="product-content">
       <div class="container">
         <div class="row">
           <div class="col-12 col-sm-6 col-md-6">
-            <div class="product-gallery">
+            <div id="product-gallery" class="product-gallery">
               <div class="swiper-container swiper-main">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img
-                      src="./assets/images/guga-foods-shirt-1.webp"
-                      alt="Product Image 1"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="./assets/images/Guga_CreatorPhotos2.webp"
-                      alt="Product Image 2"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="./assets/images/Guga_CreatorPhotosShirt3.webp"
-                      alt="Product Image 3"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="./assets/images/Guga_CreatorPhotosShirt4.webp"
-                      alt="Product Image 4"
-                    />
-                  </div>
+                <div id="swiper-main-wrapper" class="swiper-wrapper">
+                  <!-- Main images will be inserted here dynamically -->
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
               </div>
               <div class="swiper-container swiper-thumb">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img
-                      src="./assets/images/guga-foods-shirt-1.webp"
-                      alt="Product Thumbnail 1"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="./assets/images/Guga_CreatorPhotos2.webp"
-                      alt="Product Thumbnail 2"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="./assets/images/Guga_CreatorPhotosShirt3.webp"
-                      alt="Product Thumbnail 3"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="./assets/images/Guga_CreatorPhotosShirt4.webp"
-                      alt="Product Thumbnail 4"
-                    />
-                  </div>
+                <div id="swiper-thumb-wrapper" class="swiper-wrapper">
+                  <!-- Thumbnails will be inserted here dynamically -->
                 </div>
               </div>
             </div>
           </div>
           <div class="col-12 col-sm-6 col-md-6">
-            <div class="product-details">
-              <p>Guga Foods</p>
-              <h2 class="product-name">Guga Foods T-Shirt</h2>
-              <p>
-                Sharpen your knives and enjoy a succulent piece of steak in this
-                Guga Tee.
-              </p>
-              <span class="product-price">$25</span>
+            <div id="product-details" class="product-details">
+              <p id="brand-name"></p>
+              <h2 id="product-name" class="product-name"></h2>
+              <p id="product-description"></p>
+              <span id="product-price" class="product-price"></span>
               <div class="quantity-control">
                 <button class="decrease-quantity">-</button>
                 <span class="quantity">1</span>
@@ -167,6 +118,7 @@
         </div>
       </div>
     </div>
+    
 
     <div class="cart-modal-overlay">
       <div class="cart-modal">
@@ -255,6 +207,9 @@
         </div>
       </div>
     </div>
+
+    <!-- import axios -->
+    <script src="./lib/axios.min.js"></script>
     <!-- import swiper js -->
     <script src="./lib/swiper-11.1.4/package/swiper-bundle.min.js"></script>
 

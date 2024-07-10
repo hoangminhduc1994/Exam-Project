@@ -202,3 +202,54 @@ document.querySelectorAll('.decrease-quantity').forEach(button => {
 });
 
 
+
+
+
+
+ // Function to get the product ID from the URL
+ const getProductIdFromUrl = () => {
+  const params = new URLSearchParams(window.location.search);
+  return params.get('id');
+}
+
+// Function to populate the product data
+const populateProduct = (product) => {
+  document.getElementById('brand-name').textContent = product.brand;
+  document.getElementById('product-name').textContent = product.name;
+  document.getElementById('product-description').textContent = product.description; // Update here if 'detail' is used in JSON
+  document.getElementById('product-price').textContent = product.price;
+
+  const swiperMainWrapper = document.getElementById('swiper-main-wrapper');
+  const swiperThumbWrapper = document.getElementById('swiper-thumb-wrapper');
+  swiperMainWrapper.innerHTML = '';
+  swiperThumbWrapper.innerHTML = '';
+  product.images.forEach((image, index) => {
+    const mainSlide = document.createElement('div');
+    mainSlide.classList.add('swiper-slide');
+    mainSlide.innerHTML = `<img src="${image}" alt="Product Image ${index + 1}"/>`;
+    swiperMainWrapper.appendChild(mainSlide);
+
+    const thumbSlide = document.createElement('div');
+    thumbSlide.classList.add('swiper-slide');
+    thumbSlide.innerHTML = `<img src="${image}" alt="Product Thumbnail ${index + 1}"/>`;
+    swiperThumbWrapper.appendChild(thumbSlide);
+  });
+
+  
+}
+
+// Fetch the data from data.json using Axios
+axios.get('https://vm95y5-3000.csb.app/products')
+  .then(response => {
+    const products = response.data;
+    const productId = getProductIdFromUrl();
+    const product = products.find(p => p.id === parseInt(productId, 10));
+    if (product) {
+      populateProduct(product);
+    } else {
+      console.error('Product not found');
+    }
+  })
+  .catch(error => console.error('Error fetching product data:', error));
+
+
