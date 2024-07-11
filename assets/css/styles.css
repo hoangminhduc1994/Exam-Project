@@ -63,7 +63,7 @@ body {
   object-fit: cover;
 }
 .menu-main .active {
-  background-color: #586C14;
+  background-color: #586c14;
 }
 .navbar {
   display: flex;
@@ -279,11 +279,17 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease;
+  opacity: 0.8;
 }
 .post-recipe img {
   object-fit: cover;
   width: 100%;
   border-radius: 5px;
+}
+.post-recipe:hover {
+  transform: scale(0.98);
+  opacity: 1;
 }
 .post-recipe p {
   margin-top: 20px;
@@ -333,6 +339,12 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease;
+  opacity: 0.95;
+}
+.row-js .items:hover {
+  transform: scale(0.98);
+  opacity: 1;
 }
 .row-js .items img {
   object-fit: cover;
