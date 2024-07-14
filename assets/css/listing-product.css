@@ -215,7 +215,9 @@ body {
   transition: transform 0.5s ease;
   opacity: 0.95;
 }
-
+.row-js .items {
+  min-height: 470px;
+}
 .row-js .items img {
   object-fit: cover;
   width: 100%;

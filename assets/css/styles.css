@@ -259,6 +259,9 @@ body {
 .nav-videos-2 .buttons button:first-child {
   border-right: solid 5px #729000;
 }
+.nav-videos-2 .buttons button:last-child {
+  border-left: solid 5px #729000;
+}
 .nav-videos-2 .buttons button:hover {
   background-color: #729000;
 }
