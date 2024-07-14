@@ -222,17 +222,13 @@
       </div>
     </div>
 
-    <!-- recipe content -->
     <div class="recipe-content">
       <div class="container">
         <div class="row">
           <div class="col-12 col-sm-12 col-md-12">
             <div class="recipe-header">
-              <h2>Ive been COOKING Steaks WRONG all this time? WHAT!?</h2>
-              <p>
-                Today we try a steak on a shovel. This was done a long time ago
-                and today we put it to the test.
-              </p>
+              <h2 id="recipe-title"></h2>
+              <p id="recipe-description"></p>
             </div>
           </div>
         </div>
@@ -244,137 +240,42 @@
           <div class="col-12 col-sm-8 col-md-8">
             <div class="product-gallery">
               <div class="swiper-container swiper-main">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img
-                      src="./assets/images/recipe1.jpg"
-                      alt="Product Image 1"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="./assets/images/recipe2.png"
-                      alt="Product Image 2"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="./assets/images/recipe3.png"
-                      alt="Product Image 3"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="./assets/images/recipe4.png"
-                      alt="Product Image 4"
-                    />
-                  </div>
+                <div id="swiper-main-wrapper" class="swiper-wrapper">
+                  <!-- Main images will be inserted here dynamically -->
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
               </div>
               <div class="swiper-container swiper-thumb">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img
-                      src="./assets/images/recipe1.jpg"
-                      alt="Product Thumbnail 1"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="./assets/images/recipe2.png"
-                      alt="Product Thumbnail 2"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="./assets/images/recipe3.png"
-                      alt="Product Thumbnail 3"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="./assets/images/recipe4.png"
-                      alt="Product Thumbnail 4"
-                    />
-                  </div>
+                <div id="swiper-thumb-wrapper" class="swiper-wrapper">
+                  <!-- Thumbnails will be inserted here dynamically -->
                 </div>
               </div>
             </div>
           </div>
           <div class="col-12 col-sm-4 col-md-4">
             <div class="overview">
-              <div class="timer-serving">
-                <i class="fa-solid fa-clock"></i>
-                <p>Prep: 15 mins</p>
-              </div>
-              <div class="timer-serving">
-                <i class="fa-solid fa-clock"></i>
-                <p>Cook: 15 mins</p>
-              </div>
-              <div class="timer-serving">
-                <i class="fa-regular fa-clock"></i>
-                <p>Total: 30 mins</p>
-              </div>
-              <div class="timer-serving">
-                <i class="fa-solid fa-person"></i>
-                <p>Servings: 4</p>
-              </div>
+              <div class="timer-serving" id="prep-time"></div>
+              <div class="timer-serving" id="cook-time"></div>
+              <div class="timer-serving" id="total-time"></div>
+              <div class="timer-serving" id="servings"></div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- recipe detail -->
+    <!-- Recipe Detail -->
     <div class="recipe-detail">
       <div class="container">
         <div class="row">
           <div class="col-12 col-sm-12 col-md-12">
             <div class="ingredients">
               <h2>Ingredients</h2>
-              <p>Wagyu A5 Ribeye</p>
-              <p>Salt</p>
-              <p>Pepper</p>
-              <p>Garlic Powder</p>
+              <ul id="ingredients-list"></ul>
             </div>
             <div class="steps">
               <h2>Directions</h2>
-              <div class="icon">
-                <i class="fa-solid fa-square-check"></i>
-                <p>Step 1</p>
-              </div>
-              <p>Start by making sure you are using a CARBON STEEL shovel, then scrub it well with soap and water and then sterilize the shovel over a hot fire.
-              </p>
-              <img src="./assets/images/recipe2.png" alt="steps">
-            </div>
-            <div class="steps">
-              <div class="icon">
-                <i class="fa-solid fa-square-check"></i>
-                <p>Step 2</p>
-              </div>
-              <p>Season your steaks with salt and freshly ground black pepper. Lightly spread a even layer of oil onto your shovel.
-              </p>
-              <img src="./assets/images/recipe3.png" alt="steps">
-            </div>
-            <div class="steps">
-              <div class="icon">
-                <i class="fa-solid fa-square-check"></i>
-                <p>Step 3</p>
-              </div>
-              <p>Now over open flame on your grill get your shovel nice and hot and place your steak on it. let it get a nice crust on both side and cook until it reaches and internal temperature of 135°F.
-              </p>
-              <img src="./assets/images/recipe4.png" alt="steps">
-            </div>
-            <div class="steps">
-              <div class="icon">
-                <i class="fa-solid fa-square-check"></i>
-                <p>Step 4</p>
-              </div>
-              <p>Now all that's left is to slice up your steaks and enjoy your 1800'S SHOVEL STEAKS!
-              </p>
-              <img src="./assets/images/recipe5.png" alt="steps">
+              <div id="steps-list"></div>
             </div>
           </div>
         </div>
@@ -621,6 +522,8 @@
     <!-- back to top -->
     <button id="back-to-top" title="Back to top">↑</button>
 
+    <!-- import axios -->
+    <script src="./lib/axios.min.js"></script>
     <!-- Import Jquerry -->
     <script src="./lib/jquery-3.7.1.js"></script>
     <!-- Import Carousel JS -->

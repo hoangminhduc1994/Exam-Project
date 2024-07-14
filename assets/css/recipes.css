@@ -324,6 +324,17 @@ body {
     font-size: 32px;
   }
 
+  .ingredients h2 {
+    color: #fff;
+  }
+  .ingredients ul {
+    list-style: none;
+  }
+  .ingredients ul li {
+    margin-left: -32px;
+    line-height: 30px;
+    font-size: 18px;
+  }
 
 
 /* added info */
