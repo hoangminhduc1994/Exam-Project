@@ -405,7 +405,13 @@ body {
 }
 @media screen and (max-width: 480px) {
   .footer-logos img {
-    width: 180px;
+    width: 140px;
     object-fit: cover;
+  }
+  .info-logo-1 img {
+    width: 60%;
+  }
+  .info-logo-2 img {
+    width: 60%;
   }
 }
