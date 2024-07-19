@@ -73,3 +73,19 @@ const renderData = (data) => {
 rowJs.innerHTML = htmlContent;
 };
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
