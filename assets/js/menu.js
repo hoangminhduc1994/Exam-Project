@@ -102,5 +102,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  setActiveMenu(".menu-main li");
+  setActiveMenu(".menu-main li a");
 });
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const submenus = document.querySelectorAll('.submenu');
+
+  submenus.forEach(submenu => {
+    const dropdown = submenu.querySelector('.dropdown');
+    const parentWidth = submenu.offsetWidth;
+    
+    dropdown.style.minWidth = `${parentWidth}px`;
+    dropdown.style.left = '0';
+  });
+});
+
+
+
