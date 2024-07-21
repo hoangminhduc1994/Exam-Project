@@ -62,8 +62,8 @@ body {
 .header-main-logo img {
   object-fit: cover;
 }
-.menu-main .active {
-  background-color: #586c14;
+.menu-main .active a {
+  background-color: #729000;
   border-radius: 4px;
 }
 .navbar {

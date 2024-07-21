@@ -62,8 +62,9 @@ body {
 .header-main-logo img {
   object-fit: cover;
 }
-.menu-main .active {
-  background-color: #586c14;
+.menu-main .active a {
+  background-color: #729000;
+  border-radius: 4px;
 }
 .navbar {
   display: flex;
@@ -90,6 +91,7 @@ body {
   font-size: 1.2rem;
   padding: 8px 12px;
   transition: background-color 0.3s;
+  align-items: center;
 }
 .header-main-menu a:hover {
   background-color: #729000;
@@ -119,9 +121,10 @@ body {
 }
 .header-main-menu .dropdown li {
   width: 100%;
+  padding:0;
 }
 .header-main-menu .dropdown li a {
-  padding: 10px 50px;
+  padding: 10px 20px;
   text-align: center;
   display: block;
   width: 100%;

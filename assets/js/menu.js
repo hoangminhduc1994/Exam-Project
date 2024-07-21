@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  setActiveMenu(".menu-main li a");
+  setActiveMenu(".menu-main li");
 });
 
 
