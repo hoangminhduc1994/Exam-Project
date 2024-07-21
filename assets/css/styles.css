@@ -63,7 +63,8 @@ body {
   object-fit: cover;
 }
 .menu-main .active {
-  border-bottom: solid 1px #729000;
+  background-color: #586c14;
+  border-radius: 4px;
 }
 .navbar {
   display: flex;
